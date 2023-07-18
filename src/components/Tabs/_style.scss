@@ -1,0 +1,31 @@
+.qf-tab-header {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  border-bottom: $menu-border-width solid $menu-border-color;
+  margin-bottom: 0;
+  > .tabs-header-item {
+    padding: $menu-item-padding-y $menu-item-padding-x;
+    text-align: center;
+    border-bottom: $menu-item-active-border-width solid transparent;
+    &:hover {
+      cursor: pointer;
+      color: $primary;
+      border-bottom: $menu-item-active-border-width solid
+        $menu-item-active-color;
+    }
+
+    &.is-disabled {
+      color: $menu-item-disabled-color;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    &.is-active,
+    &:hover {
+      color: $menu-item-active-color;
+      border-bottom: $menu-item-active-border-width solid
+        $menu-item-active-color;
+    }
+  }
+}

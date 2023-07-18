@@ -1,0 +1,119 @@
+{
+  "name": "qingfeng-ui",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "description": "React component library",
+  "author": {
+    "name": "Aomine10"
+  },
+  "license": "MIT",
+  "keywords": [
+    "component",
+    "ui",
+    "React"
+  ],
+  "homepage": "https://gitee.com/qf10/react-component-library",
+  "repository": {
+    "type": "gitee",
+    "url": "https://gitee.com/qf10/react-component-library"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "axios": "^1.4.0",
+    "classnames": "^2.3.2",
+    "react-transition-group": "^4.4.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "link": "eslint --ext js,ts,tsx src --max-warnings 0",
+    "start": "react-scripts start",
+    "build": "npm run clean && npm run build-ts && npm run build-css",
+    "test": "react-scripts test",
+    "test:nowatch": "cross-env CI=true react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build-ts": "tsc -p tsconfig.build.json",
+    "build-css": "node-sass ./src/style/index.scss ./dist/index.css",
+    "prepublishOnly": "npm run test:nowatch && npm run link && npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test:nowatch && npm run link"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:storybook/recommended",
+      "plugin:storybook/recommended"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.9",
+    "@storybook/addon-essentials": "^7.0.26",
+    "@storybook/addon-interactions": "^7.0.26",
+    "@storybook/addon-links": "^7.0.26",
+    "@storybook/blocks": "^7.0.26",
+    "@storybook/preset-create-react-app": "^7.0.26",
+    "@storybook/react": "^7.0.26",
+    "@storybook/react-webpack5": "^7.0.26",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/classnames": "^2.3.1",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.38",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@types/react-transition-group": "^4.4.6",
+    "babel-jest": "^29.6.1",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "cross-env": "^7.0.3",
+    "eslint-plugin-storybook": "^0.6.12",
+    "husky": "^8.0.3",
+    "node-sass": "^7.0.3",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "rimraf": "^5.0.1",
+    "storybook": "^7.0.26",
+    "typescript": "^4.9.5",
+    "webpack": "^5.88.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!axios)"
+    ]
+  }
+}
