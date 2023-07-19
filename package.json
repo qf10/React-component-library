@@ -14,10 +14,10 @@
     "ui",
     "React"
   ],
-  "homepage": "https://gitee.com/qf10/react-component-library",
+  "homepage": "https://github.com/qf10/React-component-library",
   "repository": {
-    "type": "gitee",
-    "url": "https://gitee.com/qf10/react-component-library"
+    "type": "github",
+    "url": "https://github.com/qf10/React-component-library"
   },
   "files": [
     "dist"

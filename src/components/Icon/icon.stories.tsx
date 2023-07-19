@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta } from "@storybook/react";
 import Icon from "./icon";
 const meta = {
   title: "Component/Icon 图标",
@@ -6,7 +6,7 @@ const meta = {
   tags: ["autodocs"],
 } satisfies Meta<typeof Icon>;
 
-type Story = StoryObj<typeof meta>;
+// type Story = StoryObj<typeof meta>;
 export default meta;
 
 export const DefaultsIcon = {
