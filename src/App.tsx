@@ -1,5 +1,4 @@
-import React, { ChangeEvent, useEffect } from "react";
-import axios from "axios";
+import React, { ChangeEvent } from "react";
 import "./style/index.scss";
 import Button from "./components/Button/button";
 import ALert from "./components/Alert/alert";
